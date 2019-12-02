@@ -1,0 +1,56 @@
+/*création de la font Azonix*/
+@font-face{ 
+	font-family:'Azonix';
+	src: url('../Police/Azonix.otf');
+}
+
+/*titre de la page*/
+h1{
+ 
+    font-family:Azonix;
+    text-decoration:underline;
+    text-align:center;
+    
+}
+
+fieldset{
+ 
+    margin-top:1%;
+    margin-bottom:1%;
+    
+}
+
+.bad{
+    
+    background-color:red;
+    border-color:red;
+    
+}
+
+.average{
+    
+    background-color:orange;
+    border-color:orange;
+    
+}
+
+.good{
+    
+    background-color:yellow;
+    border-color:yellow;
+    
+}
+
+.very_good{
+    
+    background-color:green;
+    border-color:green;
+    
+}
+
+#Resume{
+    
+    width:50%; 
+    height:50%;
+    
+}
