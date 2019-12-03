@@ -65,7 +65,7 @@
                         <p>Votre date de naissance :</p>
                         <p>Jour :</p>
                         <!--Select d'id JourNaissance-->
-                        <select id="JourNaissance">
+                        <select id="JourNaissance" onchange="SetNewFocusOn('MoisNaissance');">
                           <option value="01">01</option>
                           <option value="02">02</option>
                           <option value="03">03</option>
@@ -103,7 +103,7 @@
                         
                         <p>Mois :</p>
                         <!--Select d'id MoisNaissance-->
-                        <select id="MoisNaissance">
+                        <select id="MoisNaissance" onchange="SetNewFocusOn('AnneeNaissance');">
                           <option value="01">01</option>
                           <option value="02">02</option>
                           <option value="03">03</option>
@@ -122,7 +122,7 @@
                         
                         <p>Année :</p>
                         <!--Select d'id AnneeNaissance-->
-                        <select id="AnneeNaissance">
+                        <select id="AnneeNaissance" onchange="CalculAge();">
                           <option value="1990">1990</option>
                           <option value="1991">1991</option>
                           <option value="1992">1992</option>

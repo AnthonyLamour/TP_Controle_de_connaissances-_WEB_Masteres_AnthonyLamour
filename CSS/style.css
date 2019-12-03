@@ -1,56 +1,79 @@
 /*création de la font Azonix*/
 @font-face{ 
+
+    /*nom de la font*/
 	font-family:'Azonix';
+    /*source de la font*/
 	src: url('../Police/Azonix.otf');
 }
 
 /*titre de la page*/
 h1{
  
+    /*font Azonix*/
     font-family:Azonix;
+    /*Titre souligné*/
     text-decoration:underline;
+    /*Titre centré*/
     text-align:center;
     
 }
 
+/*fieldset*/
 fieldset{
  
+    /*ajout de marge haute et basse*/
     margin-top:1%;
     margin-bottom:1%;
     
 }
 
+/*class bad*/
 .bad{
     
+    /*couleur de fond rouge*/
     background-color:red;
+    /*couleur de bordure rouge*/
     border-color:red;
     
 }
 
+/*class average*/
 .average{
     
+    /*couleur de fond orange*/
     background-color:orange;
+    /*couleur de bordure orange*/
     border-color:orange;
     
 }
 
+/*class good*/
 .good{
     
+    /*couleur de fond jaune*/
     background-color:yellow;
+    /*couleur de bordure jaune*/
     border-color:yellow;
     
 }
 
+/*class very_good*/
 .very_good{
-    
+   
+    /*couleur de fond vert*/
     background-color:green;
+    /*couleur de bordure vert*/
     border-color:green;
     
 }
 
+/*id Resume*/
 #Resume{
     
+    /*épaisseur 50%*/
     width:50%; 
+    /*hauteur 50%*/
     height:50%;
     
 }
