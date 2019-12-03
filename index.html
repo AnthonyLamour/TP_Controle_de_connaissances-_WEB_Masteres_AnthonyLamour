@@ -33,29 +33,29 @@
                         <!--Label de Nom-->
                         <label for="Nom">Nom	:</label>
                         <!--Input de type text d'id Nom, de nom VarNom, de taille 20 caractère, avec "Votre nom en 20 lettres max" écrit au chargement de la page et obligatoire-->
-                        <input type="text" id="Nom" name="VarNom" size="20" placeholder="Votre nom en 20 lettres max" required />
+                        <input type="text" id="Nom" name="VarNom" size="20" placeholder="Votre nom en 20 lettres max" required onchange="MakeResum();" />
                         <!--Place des érreurs lié à Nom-->
                         <span id="SpanErreurNom"></span><br/><br/>
                         
                         <!--Label de Prenom-->
                         <label for="Prenom">Prénom	:</label>
                         <!--Input de type text d'id Prenom, de nom VarPrenom, de taille 20 caractère, avec "Votre prénom en 20 lettres max" écrit au chargement de la page et obligatoire-->
-                        <input type="text" id="Prenom" name="VarPrenom" size="20" placeholder="Votre prénom en 20 lettres max" required />
+                        <input type="text" id="Prenom" name="VarPrenom" size="20" placeholder="Votre prénom en 20 lettres max" required onchange="MakeResum();" />
                         <!--Place des érreurs lié à Prenom-->
                         <span id="SpanErreurPrenom"></span><br/><br/>
                         
                         <!--sélcetion du sexe-->
                         <p>Vous êtes :</p>
                         <!--Input de type radio d'id RadioHomme, de nom VarRadioSexe, de valeur Homme et obligatoire-->
-                        <input type="radio" id="RadioHomme" name="VarRadioSexe" value="Homme" required />
+                        <input type="radio" id="RadioHomme" name="VarRadioSexe" value="Homme" required onclick="MakeResum();" />
                         <!--Label de RadioHomme-->
                         <label for="RadioHomme">Un homme</label>
                         <!--Input de type radio d'id RadioFemme, de nom VarRadioSexe, de valeur Femme et obligatoire-->
-                        <input type="radio" id="RadioFemme" name="VarRadioSexe" value="Femme" required />
+                        <input type="radio" id="RadioFemme" name="VarRadioSexe" value="Femme" required onclick="MakeResum();" />
                         <!--Label de RadioFemme-->
                         <label for="RadioFemme">Une femme</label>
                         <!--Input de type radio d'id RadioAutre, de nom VarRadioSexe, de valeur Autre et obligatoire-->
-                        <input type="radio" id="RadioAutre" name="VarRadioSexe" value="Autre" required />
+                        <input type="radio" id="RadioAutre" name="VarRadioSexe" value="Autre" required onclick="MakeResum();" />
                         <!--Label de RadioAutre-->
                         <label for="RadioAutre">Autre</label>
                         <!--Place des érreurs lié à VarRadioSexe-->
@@ -65,7 +65,7 @@
                         <p>Votre date de naissance :</p>
                         <p>Jour :</p>
                         <!--Select d'id JourNaissance-->
-                        <select id="JourNaissance" onchange="SetNewFocusOn('MoisNaissance');">
+                        <select id="JourNaissance" onchange="SetNewFocusOn('MoisNaissance'); MakeResum();">
                           <option value="01">01</option>
                           <option value="02">02</option>
                           <option value="03">03</option>
@@ -103,7 +103,7 @@
                         
                         <p>Mois :</p>
                         <!--Select d'id MoisNaissance-->
-                        <select id="MoisNaissance" onchange="SetNewFocusOn('AnneeNaissance');">
+                        <select id="MoisNaissance" onchange="SetNewFocusOn('AnneeNaissance'); MakeResum();">
                           <option value="01">01</option>
                           <option value="02">02</option>
                           <option value="03">03</option>
@@ -122,7 +122,7 @@
                         
                         <p>Année :</p>
                         <!--Select d'id AnneeNaissance-->
-                        <select id="AnneeNaissance" onchange="CalculAge();">
+                        <select id="AnneeNaissance" onchange="CalculAge(); MakeResum();">
                           <option value="1990">1990</option>
                           <option value="1991">1991</option>
                           <option value="1992">1992</option>
@@ -165,24 +165,27 @@
                         <!--Champ caché contenant l'âge de la personne-->
                         <input type="text" id="Age" value="" hidden />
                         
+                        <!--Champ caché contenant la note de la personne-->
+                        <input type="text" id="Note" value="" hidden />
+                        
                         <!--input de type textarea et d'id Resume-->
-                        <input type="textarea" id="Resume" value="Résumé de votre formulaire en temps réel" disabled />
+                        <input type="textarea" id="Resume" value="Résumé de votre formulaire en temps réel" disabled="True"/>
                     </fieldset>
                     
                     <fieldset>
                         <legend>Note</legend>
                         <p>Sélectionnez une note de 0 à 10</p>
-                        <button class="bad">0</button>
-                        <button class="bad">1</button>
-                        <button class="bad">2</button>
-                        <button class="bad">3</button>
-                        <button class="average">4</button>
-                        <button class="average">5</button>
-                        <button class="average">6</button>
-                        <button class="good">7</button>
-                        <button class="good">8</button>
-                        <button class="very_good">9</button>
-                        <button class="very_good">10</button>
+                        <button class="bad" onclick="ChangeNote(0); MakeResum();">0</button>
+                        <button class="bad" onclick="ChangeNote(1); MakeResum();">1</button>
+                        <button class="bad" onclick="ChangeNote(2); MakeResum();">2</button>
+                        <button class="bad" onclick="ChangeNote(3); MakeResum();">3</button>
+                        <button class="average" onclick="ChangeNote(4); MakeResum();">4</button>
+                        <button class="average" onclick="ChangeNote(5); MakeResum();">5</button>
+                        <button class="average" onclick="ChangeNote(6); MakeResum();">6</button>
+                        <button class="good" onclick="ChangeNote(7); MakeResum();">7</button>
+                        <button class="good" onclick="ChangeNote(8); MakeResum();">8</button>
+                        <button class="very_good" onclick="ChangeNote(9); MakeResum();">9</button>
+                        <button class="very_good" onclick="ChangeNote(10); MakeResum();">10</button>
                         
                     </fieldset>
                     

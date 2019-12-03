@@ -109,3 +109,48 @@ function CalculAge(){
     }
     
 }
+
+//MakeResum sert à faire le résumé des informations de l'utilisateur
+function MakeResum(){
+    
+    //Chaine sera le résumé
+    Chaine=""
+    
+    //Ajout du nom de la personne
+    Chaine=Chaine+"Votre Nom est : "+document.getElementById("Nom").value+"\n ";
+    //Ajout du prénom de la personne
+    Chaine=Chaine+"Votre Prénom est : "+document.getElementById("Prenom").value+"\n ";
+    
+    //Ajout du sexe de la personne
+    if(document.getElementById("RadioHomme").checked==true){
+        Chaine=Chaine+"Vous êtes un Homme \n ";
+    }else if(document.getElementById("RadioFemme").checked==true){
+        Chaine=Chaine+"Vous êtes une Femme \n";
+    }else if(document.getElementById("RadioAutre").checked==true){
+        Chaine=Chaine+"Vous êtes Autre \n ";
+    }
+    
+    //Ajout de la date de naissance de la personne
+    Chaine=Chaine+"Vous êtes né le : "+document.getElementById("JourNaissance").value+"/"+document.getElementById("MoisNaissance").value+"/"+document.getElementById("AnneeNaissance").value+"\n ";
+    
+    //Ajout de l'age
+    if(Age>"0"){
+        Chaine=Chaine+"Vous avez "+document.getElementById("Age").value+" ans.\n "
+    }else{
+        Chaine=Chaine+"Vous naîtré dans "+document.getElementById("Age").value.substring(1,document.getElementById("Age").value.length)+" ans \n ";
+    }
+    
+    //Ajout de la note
+    Chaine=Chaine+"Votre note est :"+document.getElementById("Note").value+"/10 \n ";
+    
+    //envoie dans le formulaire
+    document.getElementById("Resume").value=Chaine;
+    
+}
+
+//ChangeNote sert à changer la note de l'utilisateur
+function ChangeNote(note){
+    
+    document.getElementById("Note").value=note;
+    
+}
