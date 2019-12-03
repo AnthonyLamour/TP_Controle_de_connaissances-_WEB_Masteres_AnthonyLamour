@@ -21,9 +21,12 @@
 
 <!--Body-->
 	<body>
+        
+        <!--Titre de la page-->
         <h1>Bienvenue sur ce site de contrôle de connaissances en Web</h1>
         
-        <form id="Formulaire" action="#" method="get">
+        <!--Formulaire-->
+        <form id="Formulaire" action="reception.html" method="get">
             <!--Champs du formulaire-->
             <fieldset>
                 <legend>Formulaire d'inscription</legend>
@@ -163,10 +166,10 @@
                     <fieldset>
                         <legend>Résumé des information</legend>
                         <!--Champ caché contenant l'âge de la personne-->
-                        <input type="text" id="Age" value="" hidden />
+                        <input type="hidden" id="Age" value="" />
                         
                         <!--Champ caché contenant la note de la personne-->
-                        <input type="text" id="Note" value="" hidden />
+                        <input type="hidden" id="Note" value="" />
                         
                         <!--input de type textarea et d'id Resume-->
                         <input type="textarea" id="Resume" value="Résumé de votre formulaire en temps réel" disabled="True"/>
@@ -175,17 +178,17 @@
                     <fieldset>
                         <legend>Note</legend>
                         <p>Sélectionnez une note de 0 à 10</p>
-                        <button class="bad" onclick="ChangeNote(0); MakeResum();">0</button>
-                        <button class="bad" onclick="ChangeNote(1); MakeResum();">1</button>
-                        <button class="bad" onclick="ChangeNote(2); MakeResum();">2</button>
-                        <button class="bad" onclick="ChangeNote(3); MakeResum();">3</button>
-                        <button class="average" onclick="ChangeNote(4); MakeResum();">4</button>
-                        <button class="average" onclick="ChangeNote(5); MakeResum();">5</button>
-                        <button class="average" onclick="ChangeNote(6); MakeResum();">6</button>
-                        <button class="good" onclick="ChangeNote(7); MakeResum();">7</button>
-                        <button class="good" onclick="ChangeNote(8); MakeResum();">8</button>
-                        <button class="very_good" onclick="ChangeNote(9); MakeResum();">9</button>
-                        <button class="very_good" onclick="ChangeNote(10); MakeResum();">10</button>
+                        <button type="button" class="bad" onclick="ChangeNote(0); MakeResum();">0</button>
+                        <button type="button" class="bad" onclick="ChangeNote(1); MakeResum();">1</button>
+                        <button type="button" class="bad" onclick="ChangeNote(2); MakeResum();">2</button>
+                        <button type="button" class="bad" onclick="ChangeNote(3); MakeResum();">3</button>
+                        <button type="button" class="average" onclick="ChangeNote(4); MakeResum();">4</button>
+                        <button type="button" class="average" onclick="ChangeNote(5); MakeResum();">5</button>
+                        <button type="button" class="average" onclick="ChangeNote(6); MakeResum();">6</button>
+                        <button type="button" class="good" onclick="ChangeNote(7); MakeResum();">7</button>
+                        <button type="button" class="good" onclick="ChangeNote(8); MakeResum();">8</button>
+                        <button type="button" class="very_good" onclick="ChangeNote(9); MakeResum();">9</button>
+                        <button type="button" class="very_good" onclick="ChangeNote(10); MakeResum();">10</button>
                         
                     </fieldset>
                     
@@ -194,8 +197,9 @@
         </form>
 	</body>
 	
+    <!--footer de la page-->
 	<footer>
-        
+        <p>Anthony Lamour M</p>
 	</footer>
 	
 </html>

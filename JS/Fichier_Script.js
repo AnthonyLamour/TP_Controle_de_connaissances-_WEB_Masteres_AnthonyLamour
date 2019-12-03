@@ -154,3 +154,28 @@ function ChangeNote(note){
     document.getElementById("Note").value=note;
     
 }
+
+//Reception permet de créer le tableau de valeur
+function Reception(){
+ 
+    var TabData=""
+    var parameters = location.search.substring(1).split("&");
+    var data = "";
+    for (x in parameters)
+    {
+        var temp = parameters[x].split("=");
+        thevar = unescape(temp[0]);
+        thevalue = unescape(temp[1]);
+        thevalue = thevalue.replace("+", " ");
+        data += thevar + "=" + thevalue + "<br>";
+        console.log(data);
+    }
+    
+    document.getElementById("Nom").innerHTML=(data.substring(data.indexOf("Nom")+4,data.indexOf("Prenom")-3));
+    document.getElementById("Prenom").innerHTML=(data.substring(data.indexOf("Prenom")+7,data.indexOf("Radio")-3));
+    document.getElementById("Sexe").innerHTML=(data.substring(data.indexOf("RadioSexe")+10,data.length));
+    
+    /*changement de couleur
+    document.body.style.backgroundColor = "red";*/
+    
+}
